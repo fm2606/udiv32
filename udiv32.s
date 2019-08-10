@@ -38,7 +38,7 @@ udiv32:
 @
 mkgte:
             cmp r2, r1          @ compare r2 to r1
-            bge subdec          @ (unsigned) if r2 <= r1 subtract & decrement
+            bge subdec          @ if r2 >= r1 subtract & decrement
             add r3, r3, #1      @ increment counter
             lsl r2, r2, #1      @ r2 < r1 so left shift r2 by 1 bit
             blt mkgte
